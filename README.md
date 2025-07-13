@@ -1,5 +1,7 @@
 # Computational Intelligence for Games Final Project - Mini Metro
 
+![Demo](demo.gif)
+
 ## Description
 My goal was to develop an AI agent for the game Mini Metro. Originally, I intended to use Q-learning, but I soon found out that the state/ action space is way too large, and simulating the game is slow. I switched my plan towards implementing a genetic algorithm, and now my AI agent works by beginning with random valid configurations provided by a rules-based heuristic agent, then it proceeds by evaluating each configuration, selecting some individual configurations to become parents (90% are from the best-performing parents aka exploitation, 10% are random aka exploration), using these as parents to perform crossover (to create children configurations), mutate the children by turning any line into a loop with 10% probability, test the next generation which is split between parents and children (they will compete in the next iteration), and I repeat until done.
 
